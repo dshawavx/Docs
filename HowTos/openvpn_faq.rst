@@ -388,7 +388,11 @@ What IP Address is used for NAT'ing the VPN Clients?
 
 If the destination is another instance within the cloud provider, then the OpenVPN gateway’s private IP address is used to NAT the OpenVPN Client's traffic. But if the destination is outside the cloud provider(the Internet), then the public IP address of the OpenVPN Gateway is used.
 
-   
+Why can't I open the AVPNC_mac.pkg on OSX 10.15 Catalina?
+------------------------------------------------------------
+
+If, while opening the AVPNC_mac.pkg, the Apple Gatekeeper service generates a notification stating: "AVPNC_mac.pkg can't be opened because Apple cannot check it for malicious software", ensure that nothing on the network (including proxies) is preventing Gatekeeper from verifying certification or notarization of software. Catalina requires that each of these verifications passes for software downloaded from the Internet, and if anything prevents those checks from taking place the software cannot be opened unless a specific exemption is made in Settings > Security. 
+
 OpenVPN® is a registered trademark of OpenVPN Inc.
 
 .. |image1| image:: FAQ_media/image1.png
